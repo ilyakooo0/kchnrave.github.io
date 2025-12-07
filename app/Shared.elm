@@ -3,8 +3,11 @@ module Shared exposing (Data, Model, Msg(..), SharedMsg(..), template)
 import BackendTask exposing (BackendTask)
 import Effect exposing (Effect)
 import Element exposing (..)
+import Element.Background as Background
+import Element.Font as Font
 import FatalError exposing (FatalError)
 import Html exposing (Html)
+import Html.Attributes
 import Pages.Flags
 import Pages.PageUrl exposing (PageUrl)
 import Route exposing (Route)
@@ -88,6 +91,37 @@ view :
     -> { body : List (Html msg), title : String }
 view sharedData page model toMsg pageView =
     { body =
-        [ layout [] pageView.body ]
+        [ layout
+            [ Background.color (rgb 0 0 0)
+            , Font.color (rgb 1 1 1)
+            , Font.family [ Font.typeface "League Spartan", Font.sansSerif ]
+            ]
+            (column [ width fill ]
+                [ html
+                    (Html.img
+                        [ Html.Attributes.src "https://mc.yandex.ru/watch/105714817"
+                        , Html.Attributes.style "position" "absolute"
+                        , Html.Attributes.style "left" "-9999px"
+                        ]
+                        []
+                    )
+                , image
+                    [ width (px 150)
+                    , centerX
+                    , paddingEach { top = 16, bottom = 32, left = 0, right = 0 }
+                    ]
+                    { src = "/logo.svg"
+                    , description = "Kitchen Rave"
+                    }
+                , pageView.body
+                , el [ height (px 128) ] none
+                , row [ centerX, height (px 48), spacing 16 ]
+                    [ link [ height (px 48) ] { url = "https://www.instagram.com/ichbats", label = image [ height (px 48) ] { src = "/bats.png", description = "Bats" } }
+                    , link [ height (px 48) ] { url = "https://iko.soy", label = image [ height (px 48) ] { src = "/iko.svg", description = "iko" } }
+                    ]
+                , el [ height (px 16) ] none
+                ]
+            )
+        ]
     , title = pageView.title
     }

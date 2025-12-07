@@ -2,6 +2,7 @@ module Route.Index exposing (ActionData, Data, Model, Msg, route)
 
 import BackendTask exposing (BackendTask)
 import Element exposing (..)
+import Element.Font as Font
 import FatalError exposing (FatalError)
 import Head
 import Head.Seo as Seo
@@ -78,6 +79,24 @@ view :
 view app shared =
     { title = "Kitchen Rave"
     , body =
-        el [ centerX, centerY ]
-            (text "Kitchen Rave")
+        column [ width fill ]
+            [ row [ centerX ]
+                [ el [ width (px 16) ] none
+                , image
+                    [ paddingEach
+                        { left = 16
+                        , right = 16
+                        , top = 0
+                        , bottom = 0
+                        }
+                    , width fill
+                    , height (maximum 700 shrink)
+                    ]
+                    { src = "/13.JPG", description = "Kitchen Rave #13 poster. Dekadance x Kitchen Rave. Medium: Denis Kudla, Depressive Tuesday, Lavia, Rooina, Shinovich, Stepan Borin, Sveta Rain, Volchiy Voy, Хtonь. Under: ++++ (UK), Bats, CEKTA, DRAAG, KHNN, Replicant, VISHSCALE (UK), Zaur Gapienko. 26/12. DEX. Start: 23:00." }
+                , el [ width (px 16) ] none
+                ]
+            , el [ height (px 32) ] none
+            , link [ centerX ]
+                { url = "https://dekadance.timepad.ru/event/3707943/", label = el [ Font.underline ] (text "купить билет") }
+            ]
     }
