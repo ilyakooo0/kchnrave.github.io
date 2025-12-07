@@ -114,11 +114,6 @@ view sharedData page model toMsg pageView =
                     , description = "Kitchen Rave"
                     }
                 , pageView.body
-                , el [ height (px 128) ] none
-                , row [ centerX, height (px 48), spacing 16 ]
-                    [ link [ height (px 48) ] { url = "https://www.instagram.com/ichbats", label = image [ height (px 48) ] { src = "/bats.png", description = "Bats" } }
-                    , link [ height (px 48) ] { url = "https://iko.soy", label = image [ height (px 48) ] { src = "/iko.svg", description = "iko" } }
-                    ]
                 , el [ height (px 16) ] none
                 ]
             )
