@@ -12761,16 +12761,6 @@
         return $mdgriffith$elm_ui$Internal$Model$Rgba_fn(r, g, b, 1);
     }, $mdgriffith$elm_ui$Element$rgb = F3($mdgriffith$elm_ui$Element$rgb_fn);
     var $mdgriffith$elm_ui$Element$Font$sansSerif = $mdgriffith$elm_ui$Internal$Model$SansSerif;
-    var $mdgriffith$elm_ui$Internal$Model$SpacingStyle_fn = function (a, b, c) {
-        return { $: 5, a: a, b: b, c: c };
-    }, $mdgriffith$elm_ui$Internal$Model$SpacingStyle = F3($mdgriffith$elm_ui$Internal$Model$SpacingStyle_fn);
-    var $mdgriffith$elm_ui$Internal$Flag$spacing = $mdgriffith$elm_ui$Internal$Flag$flag(3);
-    var $mdgriffith$elm_ui$Internal$Model$spacingName_fn = function (x, y) {
-        return "spacing-" + ($elm$core$String$fromInt(x) + ("-" + $elm$core$String$fromInt(y)));
-    }, $mdgriffith$elm_ui$Internal$Model$spacingName = F2($mdgriffith$elm_ui$Internal$Model$spacingName_fn);
-    var $mdgriffith$elm_ui$Element$spacing = function (x) {
-        return $mdgriffith$elm_ui$Internal$Model$StyleClass_fn($mdgriffith$elm_ui$Internal$Flag$spacing, $mdgriffith$elm_ui$Internal$Model$SpacingStyle_fn($mdgriffith$elm_ui$Internal$Model$spacingName_fn(x, x), x, x));
-    };
     var $mdgriffith$elm_ui$Element$Font$typeface = $mdgriffith$elm_ui$Internal$Model$Typeface;
     var $author$project$Shared$view_fn = function (sharedData, page, model, toMsg, pageView) {
         return {
@@ -12796,31 +12786,6 @@
                         $mdgriffith$elm_ui$Element$paddingEach({ j$: 32, k8: 0, lW: 0, mJ: 16 })
                     ]), { ko: "Kitchen Rave", mk: "/logo.svg" }),
                     pageView.gl,
-                    $mdgriffith$elm_ui$Element$el_fn(_List_fromArray([
-                        $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(128))
-                    ]), $mdgriffith$elm_ui$Element$none),
-                    $mdgriffith$elm_ui$Element$row_fn(_List_fromArray([
-                        $mdgriffith$elm_ui$Element$centerX,
-                        $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(48)),
-                        $mdgriffith$elm_ui$Element$spacing(16)
-                    ]), _List_fromArray([
-                        $mdgriffith$elm_ui$Element$link_fn(_List_fromArray([
-                            $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(48))
-                        ]), {
-                            k7: $mdgriffith$elm_ui$Element$image_fn(_List_fromArray([
-                                $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(48))
-                            ]), { ko: "Bats", mk: "/bats.png" }),
-                            mN: "https://www.instagram.com/ichbats"
-                        }),
-                        $mdgriffith$elm_ui$Element$link_fn(_List_fromArray([
-                            $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(48))
-                        ]), {
-                            k7: $mdgriffith$elm_ui$Element$image_fn(_List_fromArray([
-                                $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(48))
-                            ]), { ko: "iko", mk: "/iko.svg" }),
-                            mN: "https://iko.soy"
-                        })
-                    ])),
                     $mdgriffith$elm_ui$Element$el_fn(_List_fromArray([
                         $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(16))
                     ]), $mdgriffith$elm_ui$Element$none)
