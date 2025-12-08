@@ -109,9 +109,20 @@ view app shared =
                             []
                         ]
             , el [ height (px 16) ] none
-            , wrappedRow [ width fill, spaceEvenly, spacing 16 ]
+            , wrappedRow
+                [ centerX
+                , spacing 16
+                ]
                 (List.map
-                    (\n -> image [ height (maximum 300 shrink), width (maximum 300 shrink) ] { src = "/11/" ++ String.fromInt n ++ ".jpg", description = "" })
+                    (\n ->
+                        image
+                            [ height (maximum 300 shrink)
+                            , width (maximum 300 shrink)
+                            , htmlAttribute (Html.Attributes.style "marginLeft" "auto")
+                            , htmlAttribute (Html.Attributes.style "marginRight" "auto")
+                            ]
+                            { src = "/11/" ++ String.fromInt n ++ ".jpg", description = "" }
+                    )
                     (List.range 1 7)
                 )
             ]
