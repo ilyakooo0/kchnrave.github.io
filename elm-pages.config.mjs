@@ -2,11 +2,12 @@ import { defineConfig } from "vite";
 import adapter from "elm-pages/adapter/netlify.js";
 
 export default {
-  vite: defineConfig({}),
+  vite: defineConfig({server: {allowedHosts: ["localhost.iko.soy"]}}),
   adapter,
   headTagsTemplate(context) {
     return `
 <link rel="stylesheet" href="/style.css" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="generator" content="elm-pages v${context.cliVersion}" />
 `;
   },

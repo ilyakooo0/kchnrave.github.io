@@ -94,9 +94,9 @@ view sharedData page model toMsg pageView =
         [ layout
             [ Background.color (rgb 0 0 0)
             , Font.color (rgb 1 1 1)
-            , Font.family [ Font.typeface "League Spartan", Font.sansSerif ]
+            , Font.family [ Font.typeface "Noto Sans", Font.sansSerif ]
             ]
-            (column [ width fill ]
+            (column [ width fill, centerX, width (maximum 700 fill), paddingEach { left = 16, right = 16, top = 0, bottom = 0 } ]
                 [ html
                     (Html.img
                         [ Html.Attributes.src "https://mc.yandex.ru/watch/105714817"
@@ -105,16 +105,30 @@ view sharedData page model toMsg pageView =
                         ]
                         []
                     )
-                , image
-                    [ width (px 150)
-                    , centerX
-                    , paddingEach { top = 16, bottom = 32, left = 0, right = 0 }
-                    ]
-                    { src = "/logo.svg"
-                    , description = "Kitchen Rave"
+                , link [ centerX ]
+                    { url = "/"
+                    , label =
+                        image
+                            [ width (px 350)
+                            , paddingEach { top = 16, bottom = 32, left = 0, right = 0 }
+                            ]
+                            { src = "/logo.svg"
+                            , description = "Kitchen Rave"
+                            }
                     }
+                , wrappedRow [ centerX, spacing 16 ]
+                    [ link []
+                        { url = "/about"
+                        , label = el [ Font.underline ] (text "About")
+                        }
+                    , link []
+                        { url = "/events/kr11"
+                        , label = el [ Font.underline ] (text "KR#11")
+                        }
+                    ]
+                , el [ height (px 64) ] none
                 , pageView.body
-                , el [ height (px 16) ] none
+                , el [ height (px 32) ] none
                 ]
             )
         ]
