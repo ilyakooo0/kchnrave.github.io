@@ -8932,6 +8932,7 @@
             mH: "Kitchen Rave #11"
         }));
     };
+    var $mdgriffith$elm_ui$Element$htmlAttribute = $mdgriffith$elm_ui$Internal$Model$Attr;
     var $elm$html$Html$Attributes$alt_a0 = "alt", $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty($elm$html$Html$Attributes$alt_a0);
     var $mdgriffith$elm_ui$Element$image_fn = function (attrs, _v0) {
         var description = _v0.ko;
@@ -8959,7 +8960,6 @@
     var $mdgriffith$elm_ui$Element$maximum_fn = function (i, l) {
         return $mdgriffith$elm_ui$Internal$Model$Max_fn(i, l);
     }, $mdgriffith$elm_ui$Element$maximum = F2($mdgriffith$elm_ui$Element$maximum_fn);
-    var $mdgriffith$elm_ui$Element$spaceEvenly = $mdgriffith$elm_ui$Internal$Model$Class_fn($mdgriffith$elm_ui$Internal$Flag$spacing, $mdgriffith$elm_ui$Internal$Style$classes.mh);
     var $mdgriffith$elm_ui$Internal$Model$PaddingStyle_fn = function (a, b, c, d, e) {
         return { $: 7, a: a, b: b, c: c, d: d, e: e };
     }, $mdgriffith$elm_ui$Internal$Model$PaddingStyle = F5($mdgriffith$elm_ui$Internal$Model$PaddingStyle_fn);
@@ -9099,13 +9099,14 @@
                     $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$px(16))
                 ]), $mdgriffith$elm_ui$Element$none),
                 $mdgriffith$elm_ui$Element$wrappedRow_fn(_List_fromArray([
-                    $mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-                    $mdgriffith$elm_ui$Element$spaceEvenly,
+                    $mdgriffith$elm_ui$Element$centerX,
                     $mdgriffith$elm_ui$Element$spacing(16)
                 ]), $elm$core$List$map_fn(function (n) {
                     return $mdgriffith$elm_ui$Element$image_fn(_List_fromArray([
                         $mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$maximum_fn(300, $mdgriffith$elm_ui$Element$shrink)),
-                        $mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$maximum_fn(300, $mdgriffith$elm_ui$Element$shrink))
+                        $mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$maximum_fn(300, $mdgriffith$elm_ui$Element$shrink)),
+                        $mdgriffith$elm_ui$Element$htmlAttribute(_VirtualDom_style_fn("marginLeft", "auto")),
+                        $mdgriffith$elm_ui$Element$htmlAttribute(_VirtualDom_style_fn("marginRight", "auto"))
                     ]), {
                         ko: "",
                         mk: "/11/" + ($elm$core$String$fromInt(n) + ".jpg")
